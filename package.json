@@ -1,0 +1,22 @@
+{
+	"name": "Memtransacted",
+	"description": "Memcached Transactions is a wrapper around node-memcached that extends Memcached ACI definiton into an ACID one. Transactions are stored in logging files via HDFS, which provides strong durability in distributed systems.",
+	"version": "0.1",
+	"main": "index",
+	"author": "Luis Cappa <luiscappa@gmail.com>",
+	"maintainers": [{
+		"name": "Luis Cappa",
+		"email": "luiscappa@gmail.com"
+	}],
+	"license": {
+		"type": "MIT",
+		"url": "https://github.com/luiscappabanda/memtransacted/blob/License"
+	},
+	"dependencies": {
+		"memcached": "0.1.5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/luiscappabanda/memtransacted.git"
+	}
+}
