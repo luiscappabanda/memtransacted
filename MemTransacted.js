@@ -1,1 +1,0 @@
-var memcached = require('node-memcached');

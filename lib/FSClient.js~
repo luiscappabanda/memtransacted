@@ -1,0 +1,42 @@
+var fs = require('fs');
+
+/**
+ * Creates a FSClient that enables I/O file operations.
+ * @path	file path where to write by default.
+ */
+function FSClient(path) {
+     this.path = path;
+}
+
+module.exports = FSClient;
+
+
+/**
+ * Basic I/O Filesystem operations.
+ */
+
+FSClient.prototype.readFile = function (filename) {
+    var text = null;
+    try {
+        text = fs.readFileSync(filename, ['utf8']);
+    }catch(e) {
+    }
+    
+  return text;
+  
+};
+
+FSClient.prototype.writeFile = function (filename, data) {
+    fs.writeFileSync(this.path+'/'+filename, data, ['utf8']);
+  
+};
+
+FSClient.prototype.appendToFile = function (filename, data) {
+    fs.writeFileSync(this.path+'/'+filename, data, ['utf8']);
+  
+};
+
+FSClient.prototype.removeFile = function (filename) {
+    fs.unlinkSync(this.path+'/'+filename);
+
+};
